@@ -34,18 +34,14 @@ body {
   padding: 2rem;
 }
 
-.btn,
-.btn-outline {
+.btn {
   display: inline-block;
   text-decoration: none;
   padding: 1rem;
   font-size: 1.6rem;
   border-radius: 0.5rem;
-}
-.btn {
   color: #fff;
   background-color: #008044;
-  border: 1px solid transparent;
 }
 
 .btn-outline {
