@@ -4,44 +4,433 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;@500&display=swap"
+      rel="stylesheet"
+    />
     <style>
-      .container {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        align-items: center;
-        align-content: center;
-        min-height: 100vh;
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: inherit;
+      }
+      html {
+        font-size: 62.5%;
+        box-sizing: border-box;
+      }
+
+      body {
+        padding: 5rem;
+        font-family: "Poppins", "sans-serif";
+        line-height: 1.6;
+        font-weight: 300;
         background: #eee;
       }
-      a {
+
+      .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 30rem));
+        justify-content: center;
+        gap: 3rem;
+        min-height: 100vh;
+      }
+
+      .box {
+        overflow: hidden;
+        background: #fff;
+        border-radius: 1rem;
+        max-height: min-content;
+      }
+      .wrapper {
+        padding: 2rem;
+      }
+
+      .btn,
+      .btn-outline {
+        display: inline-block;
         text-decoration: none;
+        padding: 1rem;
+        font-size: 1.6rem;
+        border-radius: 0.5rem;
+      }
+      .btn {
+        color: #fff;
+        background-color: #008044;
+        border: 1px solid transparent;
+      }
+
+      .btn-outline {
         color: #000;
-        padding: 1.5rem;
+        border: 1px solid #333;
+        margin-right: 2rem;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      h2 {
+        font-size: 3rem;
+        font-weight: 500;
+      }
+      p {
+        font-size: 1.6rem;
+        margin-bottom: 2rem;
+      }
+
+      @media only screen and (max-width: 377px) {
+        .container {
+          padding: 2rem;
+        }
       }
     </style>
     <title>JS 30</title>
   </head>
   <body>
     <div class="container">
-      <a href="" class="link">Day-1</a><a href="" class="link">Day-2 </a>
-      <a href="" class="link">Day-3</a><a href="" class="link">Day-4 </a>
-      <a href="" class="link">Day-5</a><a href="" class="link">Day-6 </a>
-      <a href="" class="link">Day-7</a><a href="" class="link">Day-8 </a>
-      <a href="" class="link">Day-9</a><a href="" class="link">Day-10 </a>
-      <a href="" class="link">Day-11</a><a href="" class="link">Day-12 </a>
-      <a href="" class="link">Day-13</a><a href="" class="link">Day-14 </a>
-      <a href="" class="link">Day-15</a><a href="" class="link">Day-16 </a>
-      <a href="" class="link">Day-17</a><a href="" class="link">Day-18 </a>
-      <a href="" class="link">Day-19</a><a href="" class="link">Day-20 </a>
-      <a href="" class="link">Day-21</a><a href="" class="link">Day-22 </a>
-      <a href="" class="link">Day-25</a><a href="" class="link">Day-23 </a>
-      <a href="" class="link">Day-25</a><a href="" class="link">Day-24 </a>
-      <a href="" class="link">Day-25</a><a href="" class="link">Day-25 </a>
-      <a href="" class="link">Day-25</a><a href="" class="link">Day-26 </a>
-      <a href="" class="link">Day-27</a><a href="" class="link">Day-28 </a>
-      <a href="" class="link">Day-23</a><a href="" class="link">Day-24 </a>
-      <a href="" class="link">Day-29</a><a href="" class="link">Day-30 </a>
+      <div class="box">
+        <figure class="img-box">
+          <img src="images/image.jpg" alt="Drum kit " />
+        </figure>
+        <div class="wrapper">
+          <h2>Day-1</h2>
+          <p>Drum Kit</p>
+          <a href="Day-1" class="btn-outline" target="_blank">View Code</a>
+          <a href="Day-1/index.html" class="btn" target="_blank">
+            Live Preview
+          </a>
+        </div>
+      </div>
+      <div class="box">
+        <figure class="img-box">
+          <img src="images/coming.jpg" alt="Coming soon " />
+        </figure>
+        <div class="wrapper">
+          <h2>Day-2</h2>
+          <p>Coming Soon</p>
+          <a href="#" class="btn-outline" target="_blank">View Code</a>
+          <a href="#" class="btn" target="_blank">Live Preview</a>
+        </div>
+      </div>
+      <div class="box">
+        <figure class="img-box">
+          <img src="images/coming.jpg" alt="Coming soon " />
+        </figure>
+        <div class="wrapper">
+          <h2>Day-3</h2>
+          <p>Coming Soon</p>
+          <a href="#" class="btn-outline" target="_blank">View Code</a>
+          <a href="#" class="btn" target="_blank">Live Preview</a>
+        </div>
+      </div>
+      <div class="box">
+        <figure class="img-box">
+          <img src="images/coming.jpg" alt="Coming soon " />
+        </figure>
+        <div class="wrapper">
+          <h2>Day-4</h2>
+          <p>Coming Soon</p>
+          <a href="#" class="btn-outline" target="_blank">View Code</a>
+          <a href="#" class="btn" target="_blank">Live Preview</a>
+        </div>
+      </div>
+      <div class="box">
+        <figure class="img-box">
+          <img src="images/coming.jpg" alt="Coming soon " />
+        </figure>
+        <div class="wrapper">
+          <h2>Day-5</h2>
+          <p>Coming Soon</p>
+          <a href="#" class="btn-outline" target="_blank">View Code</a>
+          <a href="#" class="btn" target="_blank">Live Preview</a>
+        </div>
+      </div>
+      <div class="box">
+        <figure class="img-box">
+          <img src="images/coming.jpg" alt="Coming soon " />
+        </figure>
+        <div class="wrapper">
+          <h2>Day-6</h2>
+          <p>Coming Soon</p>
+          <a href="#" class="btn-outline" target="_blank">View Code</a>
+          <a href="#" class="btn" target="_blank">Live Preview</a>
+        </div>
+      </div>
+      <div class="box">
+        <figure class="img-box">
+          <img src="images/coming.jpg" alt="Coming soon " />
+        </figure>
+        <div class="wrapper">
+          <h2>Day-6</h2>
+          <p>Coming Soon</p>
+          <a href="#" class="btn-outline" target="_blank">View Code</a>
+          <a href="#" class="btn" target="_blank">Live Preview</a>
+        </div>
+      </div>
+      <div class="box">
+        <figure class="img-box">
+          <img src="images/coming.jpg" alt="Coming soon " />
+        </figure>
+        <div class="wrapper">
+          <h2>Day-7</h2>
+          <p>Coming Soon</p>
+          <a href="#" class="btn-outline" target="_blank">View Code</a>
+          <a href="#" class="btn" target="_blank">Live Preview</a>
+        </div>
+      </div>
+      <div class="box">
+        <figure class="img-box">
+          <img src="images/coming.jpg" alt="Coming soon " />
+        </figure>
+        <div class="wrapper">
+          <h2>Day-8</h2>
+          <p>Coming Soon</p>
+          <a href="#" class="btn-outline" target="_blank">View Code</a>
+          <a href="#" class="btn" target="_blank">Live Preview</a>
+        </div>
+      </div>
+      <div class="box">
+        <figure class="img-box">
+          <img src="images/coming.jpg" alt="Coming soon " />
+        </figure>
+        <div class="wrapper">
+          <h2>Day-9</h2>
+          <p>Coming Soon</p>
+          <a href="#" class="btn-outline" target="_blank">View Code</a>
+          <a href="#" class="btn" target="_blank">Live Preview</a>
+        </div>
+      </div>
+      <div class="box">
+        <figure class="img-box">
+          <img src="images/coming.jpg" alt="Coming soon " />
+        </figure>
+        <div class="wrapper">
+          <h2>Day-10</h2>
+          <p>Coming Soon</p>
+          <a href="#" class="btn-outline" target="_blank">View Code</a>
+          <a href="#" class="btn" target="_blank">Live Preview</a>
+        </div>
+      </div>
+      <div class="box">
+        <figure class="img-box">
+          <img src="images/coming.jpg" alt="Coming soon " />
+        </figure>
+        <div class="wrapper">
+          <h2>Day-11</h2>
+          <p>Coming Soon</p>
+          <a href="#" class="btn-outline" target="_blank">View Code</a>
+          <a href="#" class="btn" target="_blank">Live Preview</a>
+        </div>
+      </div>
+      <div class="box">
+        <figure class="img-box">
+          <img src="images/coming.jpg" alt="Coming soon " />
+        </figure>
+        <div class="wrapper">
+          <h2>Day-12</h2>
+          <p>Coming Soon</p>
+          <a href="#" class="btn-outline" target="_blank">View Code</a>
+          <a href="#" class="btn" target="_blank">Live Preview</a>
+        </div>
+      </div>
+      <div class="box">
+        <figure class="img-box">
+          <img src="images/coming.jpg" alt="Coming soon " />
+        </figure>
+        <div class="wrapper">
+          <h2>Day-13</h2>
+          <p>Coming Soon</p>
+          <a href="#" class="btn-outline" target="_blank">View Code</a>
+          <a href="#" class="btn" target="_blank">Live Preview</a>
+        </div>
+      </div>
+      <div class="box">
+        <figure class="img-box">
+          <img src="images/coming.jpg" alt="Coming soon " />
+        </figure>
+        <div class="wrapper">
+          <h2>Day-14</h2>
+          <p>Coming Soon</p>
+          <a href="#" class="btn-outline" target="_blank">View Code</a>
+          <a href="#" class="btn" target="_blank">Live Preview</a>
+        </div>
+      </div>
+      <div class="box">
+        <figure class="img-box">
+          <img src="images/coming.jpg" alt="Coming soon " />
+        </figure>
+        <div class="wrapper">
+          <h2>Day-15</h2>
+          <p>Coming Soon</p>
+          <a href="#" class="btn-outline" target="_blank">View Code</a>
+          <a href="#" class="btn" target="_blank">Live Preview</a>
+        </div>
+      </div>
+      <div class="box">
+        <figure class="img-box">
+          <img src="images/coming.jpg" alt="Coming soon " />
+        </figure>
+        <div class="wrapper">
+          <h2>Day-16</h2>
+          <p>Coming Soon</p>
+          <a href="#" class="btn-outline" target="_blank">View Code</a>
+          <a href="#" class="btn" target="_blank">Live Preview</a>
+        </div>
+      </div>
+      <div class="box">
+        <figure class="img-box">
+          <img src="images/coming.jpg" alt="Coming soon " />
+        </figure>
+        <div class="wrapper">
+          <h2>Day-17</h2>
+          <p>Coming Soon</p>
+          <a href="#" class="btn-outline" target="_blank">View Code</a>
+          <a href="#" class="btn" target="_blank">Live Preview</a>
+        </div>
+      </div>
+      <div class="box">
+        <figure class="img-box">
+          <img src="images/coming.jpg" alt="Coming soon " />
+        </figure>
+        <div class="wrapper">
+          <h2>Day-18</h2>
+          <p>Coming Soon</p>
+          <a href="#" class="btn-outline" target="_blank">View Code</a>
+          <a href="#" class="btn" target="_blank">Live Preview</a>
+        </div>
+      </div>
+      <div class="box">
+        <figure class="img-box">
+          <img src="images/coming.jpg" alt="Coming soon " />
+        </figure>
+        <div class="wrapper">
+          <h2>Day-19</h2>
+          <p>Coming Soon</p>
+          <a href="#" class="btn-outline" target="_blank">View Code</a>
+          <a href="#" class="btn" target="_blank">Live Preview</a>
+        </div>
+      </div>
+      <div class="box">
+        <figure class="img-box">
+          <img src="images/coming.jpg" alt="Coming soon " />
+        </figure>
+        <div class="wrapper">
+          <h2>Day-20</h2>
+          <p>Coming Soon</p>
+          <a href="#" class="btn-outline" target="_blank">View Code</a>
+          <a href="#" class="btn" target="_blank">Live Preview</a>
+        </div>
+      </div>
+      <div class="box">
+        <figure class="img-box">
+          <img src="images/coming.jpg" alt="Coming soon " />
+        </figure>
+        <div class="wrapper">
+          <h2>Day-21</h2>
+          <p>Coming Soon</p>
+          <a href="#" class="btn-outline" target="_blank">View Code</a>
+          <a href="#" class="btn" target="_blank">Live Preview</a>
+        </div>
+      </div>
+      <div class="box">
+        <figure class="img-box">
+          <img src="images/coming.jpg" alt="Coming soon " />
+        </figure>
+        <div class="wrapper">
+          <h2>Day-22</h2>
+          <p>Coming Soon</p>
+          <a href="#" class="btn-outline" target="_blank">View Code</a>
+          <a href="#" class="btn" target="_blank">Live Preview</a>
+        </div>
+      </div>
+      <div class="box">
+        <figure class="img-box">
+          <img src="images/coming.jpg" alt="Coming soon " />
+        </figure>
+        <div class="wrapper">
+          <h2>Day-23</h2>
+          <p>Coming Soon</p>
+          <a href="#" class="btn-outline" target="_blank">View Code</a>
+          <a href="#" class="btn" target="_blank">Live Preview</a>
+        </div>
+      </div>
+      <div class="box">
+        <figure class="img-box">
+          <img src="images/coming.jpg" alt="Coming soon " />
+        </figure>
+        <div class="wrapper">
+          <h2>Day-24</h2>
+          <p>Coming Soon</p>
+          <a href="#" class="btn-outline" target="_blank">View Code</a>
+          <a href="#" class="btn" target="_blank">Live Preview</a>
+        </div>
+      </div>
+      <div class="box">
+        <figure class="img-box">
+          <img src="images/coming.jpg" alt="Coming soon " />
+        </figure>
+        <div class="wrapper">
+          <h2>Day-25</h2>
+          <p>Coming Soon</p>
+          <a href="#" class="btn-outline" target="_blank">View Code</a>
+          <a href="#" class="btn" target="_blank">Live Preview</a>
+        </div>
+      </div>
+      <div class="box">
+        <figure class="img-box">
+          <img src="images/coming.jpg" alt="Coming soon " />
+        </figure>
+        <div class="wrapper">
+          <h2>Day-26</h2>
+          <p>Coming Soon</p>
+          <a href="#" class="btn-outline" target="_blank">View Code</a>
+          <a href="#" class="btn" target="_blank">Live Preview</a>
+        </div>
+      </div>
+      <div class="box">
+        <figure class="img-box">
+          <img src="images/coming.jpg" alt="Coming soon " />
+        </figure>
+        <div class="wrapper">
+          <h2>Day-27</h2>
+          <p>Coming Soon</p>
+          <a href="#" class="btn-outline" target="_blank">View Code</a>
+          <a href="#" class="btn" target="_blank">Live Preview</a>
+        </div>
+      </div>
+      <div class="box">
+        <figure class="img-box">
+          <img src="images/coming.jpg" alt="Coming soon " />
+        </figure>
+        <div class="wrapper">
+          <h2>Day-28</h2>
+          <p>Coming Soon</p>
+          <a href="#" class="btn-outline" target="_blank">View Code</a>
+          <a href="#" class="btn" target="_blank">Live Preview</a>
+        </div>
+      </div>
+      <div class="box">
+        <figure class="img-box">
+          <img src="images/coming.jpg" alt="Coming soon " />
+        </figure>
+        <div class="wrapper">
+          <h2>Day-29</h2>
+          <p>Coming Soon</p>
+          <a href="#" class="btn-outline" target="_blank">View Code</a>
+          <a href="#" class="btn" target="_blank">Live Preview</a>
+        </div>
+      </div>
+      <div class="box">
+        <figure class="img-box">
+          <img src="images/coming.jpg" alt="Coming soon " />
+        </figure>
+        <div class="wrapper">
+          <h2>Day-30</h2>
+          <p>Coming Soon</p>
+          <a href="#" class="btn-outline" target="_blank">View Code</a>
+          <a href="#" class="btn" target="_blank">Live Preview</a>
+        </div>
+      </div>
     </div>
   </body>
 </html>
