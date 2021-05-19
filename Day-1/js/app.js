@@ -1,21 +1,8 @@
 "use strict";
+const keys = document.querySelectorAll(".key");
+
 // playing sound
-const playSound = function (key) {
-  const audio = new Audio(`sounds/${key}.wav`);
-  audio.play();
-};
-
-// add animation to the button
-const addAnimation = function (key) {
-  const btnClicked = document.querySelector(`.${key}`);
-  btnClicked.classList.add("playing");
-  setTimeout(function () {
-    btnClicked.classList.remove("playing");
-  }, 100);
-};
-
-// /listening to keyboard events
-document.addEventListener("keydown", function (e) {
+const playSound = function (e) {
   if (
     e.key === "a" ||
     e.key === "s" ||
@@ -29,5 +16,24 @@ document.addEventListener("keydown", function (e) {
   ) {
     playSound(e.key);
     addAnimation(e.key);
+    const audio = new Audio(`sounds/${e.key}.wav`);
+    audio.play();
   }
-});
+};
+
+// adding transition
+const addAnimation = function (key) {
+  const keyClicked = document.querySelector(`.${key}`);
+  keyClicked.classList.add("playing");
+};
+
+// removing transition
+const removeAnimation = function (key) {
+  if (key.propertyName !== "transform") return;
+  this.classList.remove("playing");
+};
+
+// /listening to events
+document.addEventListener("keydown", playSound);
+
+for (let key of keys) key.addEventListener("transitionend", removeAnimation);
