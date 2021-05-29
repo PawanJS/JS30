@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Key Detection</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+    </style>
+    <script
+      defer
+      type="text/javascript"
+      src="https://www.cornify.com/js/cornify.js"
+    ></script>
+  </head>
+  <body>
+    <p>Try pressing pawanjs with keyboard</p>
+    <script>
+      const pressed = [];
+      const secretCode = "pawanjs";
+      document.addEventListener("keyup", function (e) {
+        pressed.push(e.key);
+        pressed.splice(
+          -secretCode.length - 1,
+          pressed.length - secretCode.length
+        );
+
+        if (pressed.join("").includes(secretCode)) {
+          console.log("DING DING");
+          cornify_add();
+        }
+      });
+    </script>
+  </body>
+</html>
